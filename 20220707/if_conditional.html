@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="page-title">if conditional</h1>
+    <input type="number" oninput="checkage()" id="age-input">
+    <p>
+        result: <span id='result-span'></span>
+    </p>
+
+
+    <script>
+        let a = 20;
+        a++;
+        console.log('first:' + a);
+        a++;
+        console.log('' + a);
+        /*
+        // comprasion operator
+        // if( boolean-condition){//true
+            // process**
+        }
+        // */
+
+
+        if (a > 30) {
+            console.log('enter here');
+        }
+
+        let pageTitle = document.getElementById('page-title');
+        console.log(pageTitle.innerText);
+
+        // replace<h>element change
+        pageTitle.innerText = 'change by js';
+
+        function checkage() {
+            console.log('Here...');
+
+            let ageInput = document.getElementById('age-input');
+            let result = document.getElementById('result-span');
+
+            console.log(ageInput.value);
+            //can
+            if (ageInput.value < 20) { // 19 < 20
+                console.log('can drink');
+                result.innerText = 'can dance';
+            }
+
+            //cannot
+            if (ageInput.value > 19) { // 19 > 19
+                console.log('can do');
+                result.innerText = 'can doit';
+            }
+
+        }
+    </script>
+
+</body>
+
+
+</html>

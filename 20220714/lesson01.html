@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="id-age">Age</label>
+    <input type="number" id="id-age" oninput="checkAge()">
+
+    <p>
+        Average : <span id="result"></span>
+    </p>
+
+    <script>
+        function checkAge() {
+            // get input element
+            let ageInput = document.getElementById('id-age');
+            //  get span element
+            let resultspan = document.getElementById('result');
+
+            // if (ageInput.value < 20) {
+            //     // no
+            //     resultspan.innerText='no';
+            // }
+            // if (ageInput.value > 19) {
+            //     // yes
+            //     resultspan.innerText='yes';
+            // }
+            // if(ageInput.value<20){
+            //     resultspan.innerText='no';
+            // }else{
+            //     resultspan.innerText='yes';
+            // }
+            if (ageInput.value > 50) {
+                resultspan.innerText = 'old person';
+            }else if (ageInput.value > 20) {
+                resultspan.innerText = 'adult';
+            }
+           else if (ageInput.value < 20) {
+                resultspan.innerText = 'child';
+            }
+
+            
+        }
+    </script>
+
+</body>
+
+</html>

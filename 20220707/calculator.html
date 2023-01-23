@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">number one</label>
+        <input type="number" value="0" id="no1">
+    </div>
+    <div>
+        <label for="">number two</label>
+        <input type="number" value="0" id="no2">
+    </div>
+    <div>
+        <p>
+            sum output: <span id="sum-output"></span>
+        </p>
+        <p>
+            sub output: <span id="sub-output"></span>
+        </p>
+
+
+    </div>
+    <div>
+        <input type="button" value="sum" onclick="addTwoNumber()">
+        <input type="button" value="sub" onclick="substractionTwoNumber()">
+    </div>
+    <script>
+        function addTwoNumber() {
+            console.log('nn')
+            let numOne = document.getElementById('no1');
+            let numTwo = document.getElementById('no2');
+            let sumOutput = document.getElementById('sum-output')
+            //  changing into number
+            console.log(Number(numOne.value) + Number(numTwo.value));
+            sumOutput.innerText = Number(numOne.value) + Number(numTwo.value);
+
+        }
+        function substractionTwoNumber(){
+            let numOne = document.getElementById('no1');
+            let numTwo = document.getElementById('no2');
+            let suboutput = document.getElementById('sub-output')
+
+            console.log(Number(numOne.value) - Number(numTwo.value));
+            suboutput.innerText = Number(numOne.value) - Number(numTwo.value);
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

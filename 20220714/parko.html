@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">User Name</label> <br>
+    <input type="text" id="name" placeholder="Enter your Name" oninput="checkNameValid()">
+    <span id="nameErrorMsg"></span>
+
+    <br>
+    <!-- 
+    <label for="password" id="word">Password</label>
+    <input type="text" id="word" placeholder="Enter your Name" oninput="hello()">
+    <br>
+
+    <label for="cpassword" id="confirm">Confirm Password</label>
+    <input type="text" id="conform" placeholder="Enter your Name" oninput="hello()"> -->
+
+
+    <script>
+        function checkNameValid() {
+            let nameInput = document.getElementById('name');
+            let errorMsg = document.getElementById('nameErrorMsg');
+            // if(nameInput.value)
+            console.log(nameInput.value.length)
+
+            if (nameInput.value.length < 5) {
+                errorMsg.innerText = "User name must be at least 5 characters";
+            }else{
+                errorMsg.innerText = '';
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
